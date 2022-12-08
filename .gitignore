@@ -1,6 +1,7 @@
+*.pyc
+__pycache__
 Lib
 Scripts
 pyenv.cfg
-__pycache__/
-*.py[cod]
-*$py.class
+
+

@@ -2,7 +2,10 @@
 <hr />
 {%for activity in activity_messages %}
 <div>
-  <small>@{{activity.user}} replied to {{activity.room}}</small>
+  <small
+    >@<a href="{% url 'user-profile' activity.user.id %}">{{activity.user}}</a>
+    replied to {{activity.room}}</small
+  >
   <small>{{activity.created|timesince}} ago</small>
   <p>{{activity}}</p>
   {% if request.user == activity.user %}
